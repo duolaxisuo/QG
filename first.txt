@@ -1,3 +1,0 @@
-git is a free software and JS is the best language in the world.
-Git is free software distributed under the GPL.
-git tracks changes.
