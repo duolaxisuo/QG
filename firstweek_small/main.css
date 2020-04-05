@@ -1,4 +1,3 @@
-
         *{
 		margin: 0px;
 		padding: 0px;
@@ -10,11 +9,26 @@
 	    	overflow-x: hidden;
 	    	margin: 0 auto;
 	    	width: 100%;
+	    	background-image: url("图片/11.jpg");
+	    	background-repeat: no-repeat;	
+	    	background-size: 100% 100%;
+	    	/*animation:myfirst  30s;*/
+	    	-webkit-backface-visibility: hidden;
+	    	-webkit-transform-style: preserve-3d; 
+	    	-webkit-animation:myfirst  30s;
+	    }
+	    @keyframes myfirst{
+            0%{background-image: url("图片/04.jpg");}
+            0.1%{background-image: url("图片/02.jpg");}
+            25%{background-image: url("图片/01.jpg");}
+            50%{background-image: url("图片/02.jpg");}
+            75%{background-image: url("图片/04.jpg");}
+            100%{background-image: url("图片/11.jpg");}
 	    }
 		._head{
 			display: flex;
 			justify-content: center;
-			background-color: rgb(235,235,235);
+			/*background-color: rgb(235,235,235);*/
 			border-bottom: 1px solid rgb(220,220,220);
 		}
 		.guide{
@@ -30,22 +44,36 @@
            padding: 12px;
 		}
 		._head ._title span{
+			color: rgb(250,240,200);
 			margin-right: 5px;
 			font-size: 50px;
+			transition: font-size 3s;
+			-moz-transition: font-size 3s;
+			-webkit-transition: font-size 3s;
+            -o-transition: font-size 3s;
         }
 		._head ._title a#_title{
             font-size: 25px;
 			font-weight: bolder;
-			color: rgb(17,17,17);
+			color: rgb(250,240,200);
+			/*transition: font-size 3s;*/
 		}
+		/*a#_title:hover{
+			font-size: 30px;
+		}*/
 		._head .guidewz{
-			color: rgb(116,116,116);
+			color: rgb(230,145,150);
             font-size: 14px;
             font-weight: bold;
+            transition: font-size 0.8s,color 0.8s;
+            -moz-transition:font-size 0.8s,color 0.8s;
+            -webkit-transition: font-size 0.8s,color 0.8s;
+            -o-transition: font-size 0.8s,color 0.8s;
 		}
 		._head .guide p a:hover{
-			color: red;
+			color: rgb(192,142,175);
 			font-weight: bolder;
+			font-size: 20px;
 		}
 		._head .guide p{
             width: 20px;
@@ -56,76 +84,83 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background-color: rgb(235,235,235);
+			/*background-color: rgb(235,235,235);*/
             height: 200px;
 		}
 		._body ._bodys #s{
-			font-size: 60px;
+			font-size: 60px;		
 		}
 		._body ._bodys #x{
             font-size: 20px;
-            color: gray;
+            color: rgb(253,239,200);
 		}
 		/****************************/
 		.sign{
 			display: flex;
-			background-color: rgb(235,235,235);
+			/*background-color: rgb(235,235,235);*/
 			height: 463px;
 			justify-content: center;
 		}
-		.sign .dh{
-			background-color: rgb(226,225,228);
-			width: 450px;
-			height: 400px;
-		}
-		.sign .dh #zizi{
-			margin: 8px;
-			color: gray;
-			font-size: 5px;
-			font-weight: bold;
-		}
-		.sign .dh .tu img{
-		    border:0.5px solid gray;
-            border-radius: 25px;
-            position: relative;
-            bottom: 20px;
-            width: 450px;
-            height: 400px;
-		}
 		/*************************/
 		.box{
-			position: absolute;
-			top: 430px;
+			border-radius: 50px; 
+			width: 500px;
+			height: 250px;	
+			border:1px solid black;
+			text-align: center;
+			padding-top: 40px;
+			box-shadow: 10px 10px 10px 2px #888888;
 		}
 		h2{
 			margin-bottom: 5px;
-			font-size: 30px;
+			font-size: 40px;
 			font-weight: bold;
+			text-shadow: 5px 5px 5px #888888;
 		}
-		label{
-			position: relative;
-			right: 180px;
-			color: rgb(76,31,36);
-			font-size: 12px;
-			opacity: 0.5;
-		}
-		input[type="text"]{
+		
+		input[type="text"],input[type="password"]{
 		    width: 180px;
             height: 25px;
+            color: black;
             opacity: 0.3;
             border-radius: 20px;
+            padding: 3px;
+            padding-left: 8px;
+            outline: none;  /*去除直角边框*/
+            z-index: 2;
+            transition: width 0.8s,height 0.8s;
+            -webkit-transition: width 0.8s,height 0.8s;
+            -moz-transition: width 0.8s,height 0.8s;
+            -o-transition: width 0.8s,height 0.8s;
+
 		}
-		input[type="password"]{
-			width: 180px;
-            height: 25px;
-            opacity: 0.3;
-            border-radius: 20px;
+		input[type="text"]:hover,input[type="password"]:hover{
+            width:200px;
+            height: 30px; 
 		}
 		input[type="submit"] {
             margin-top: 10px;
             width: 70px;
             height: 30px;
             border-radius: 25px;
-            color: thistle;
             opacity: 0.5;
+            outline: none;
+            font-weight: bolder;
+            cursor:pointer;
+            transition: width 0.8s,height 0.8s,font-size 0.8s;
+            -webkit-transition: width 0.8s,height 0.8s,font-size 0.8s;
+            -moz-transition: width 0.8s,height 0.8s,font-size 0.8s;
+            -o-transition: width 0.8s,height 0.8s,font-size 0.8s;
+        }
+        input[type="submit"]:hover{
+        	width: 100px;
+        	height: 40px;
+        	font-size: 20px;
+        }
+        .sign img{
+        	position: relative;
+        	top: 6px;
+        	right: 2px;
+        	width: 22px;
+        	height: 22px;
         }
