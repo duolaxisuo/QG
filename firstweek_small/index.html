@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <div class="_head">
+        <div class="_title"><span id="_title">欢</span>迎</div>
+        <div class="guide">
+            <p class="guidewz">首页</p>
+        </div>
+        <div class="guide">
+            <p class="guidewz">作品</p>
+        </div>
+        <div class="guide">
+            <p class="guidewz">指南</p>
+        </div>
+        <div class="guide">
+            <p class="guidewz" onclick="back()">登录</p>
+        </div>
+        <div class="guide">
+            <p class="guidewz" onclick="reverse()">注册</p>
+        </div>
+    </div>
+    <div class="_body">
+        <div class="_bodys"><span id="s">登录开启你的历程</span></br><span id="x">领取专属彩虹屁</span></div>
+    </div>
+    <div class="sign">
+        <div class="box" id="dl">
+            <h2>Login</h2>
+            <form target="nm_iframe">
+                <div class="inputbox">
+                    <img src="图片/icon-账户.png" alt="">
+                    <input type="text" name="" placeholder="Username" onblur="checkUsername1(this)" autocomplete="off">
+                    <img id="001" class="check" src="图片/icon-正确.png" alt="">
+                </div>
+                <div class="inputbox">
+                    <img src="图片/icon-锁 .png" alt="">
+                    <input type="password" name=" " placeholder="Password" onblur="checkPassword1(this)"
+                        autocomplete="off">
+                    <img id="002" class="check" src="图片/icon-正确.png" alt="">
+                    <iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
+                </div>
+                <input type="submit" name="" value="Login" id="Login">
+            </form>
+        </div>
+        <div class="box_2" id="zc">
+            <h2>Register</h2>
+            <div class="inputbox">
+                <img src="图片/icon-账户.png" alt="">
+                <input id='re_username' type="text" name="" placeholder="Username" onblur="checkUsername(this)"
+                    autocomplete="off">
+                <img id="01" class="check" src="图片/icon-正确.png" alt="">
+            </div>
+            <div class="inputbox">
+                <img src="图片/icon-锁 .png" alt="">
+                <input id='re_password' type="password" name="" placeholder="Password" onblur="checkPassword(this)"
+                    autocomplete="off">
+                <img id="02" class="check" src="图片/icon-正确.png" alt="">
+            </div>
+            <div class="inputbox">
+                <img src="图片/icon-电话.png" alt="">
+                <input id='re_phone' type="tel" name="" placeholder="Phone number" onblur="checknumber(this)"
+                    autocomplete="off">
+                <img id="03" class="check" src="图片/icon-正确.png" alt="">
+            </div>
+            <div class="inputbox">
+                <img src="图片/icon-邮箱.png" alt="">
+                <input id='re_email' type="email" name="" placeholder="E-mail" onblur="checkEmail(this)"
+                    autocomplete="off">
+                <img id="04" class="check" src="图片/icon-正确.png" alt="">
+            </div>
+            <div class="inputbox">
+                <img src="图片/icon-name.png" alt="">
+                <input id='re_name' type="text" name="" placeholder="Name" onblur="checkName(this)" autocomplete="off">
+                <img id="05" class="check" src="图片/icon-正确.png" alt="">
+            </div>
+            <input type="submit" value="creat" id="register">
+
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/behaviour.js"></script>
+<script src="js/test.js"></script>
+
+</html>
